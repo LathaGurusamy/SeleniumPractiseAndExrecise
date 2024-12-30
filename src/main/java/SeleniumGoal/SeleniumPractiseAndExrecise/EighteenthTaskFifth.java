@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class EighteenTaskFifth {
+public class EighteenthTaskFifth {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
 

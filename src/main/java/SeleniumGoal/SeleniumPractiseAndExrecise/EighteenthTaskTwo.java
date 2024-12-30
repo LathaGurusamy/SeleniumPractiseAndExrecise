@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class EighteenTaskSecoond {
+public class EighteenthTaskTwo {
     public static void main(String[] args) {
         // Set up the ChromeDriver using WebDriverManager
         WebDriverManager.chromedriver().setup();
