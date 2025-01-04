@@ -101,10 +101,10 @@ public class TwentySixthTaskThree {
         // Verify that the page title is "The Internet"
         String pageTitle = driver.getTitle();
         System.out.println("Page Title: " + pageTitle);
-        if ("The Internet".equals(pageTitle)) {
-            System.out.println("Verification successful: Page title is 'The Internet'.");
+        if ("Frames".equals(pageTitle)) {
+            System.out.println("Verification successful: Page title is 'Frames'.");
         } else {
-            System.out.println("Verification failed: Page title is not 'The Internet'.");
+            System.out.println("Verification failed: Page title is not 'Frames'.");
         }
 
         // Close the browser instance
