@@ -1,34 +1,40 @@
 package SeleniumGoal.SeleniumPractiseAndExrecise;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.JavascriptExecutor;
+import java.util.concurrent.TimeUnit;
 
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 public class TwentySixthTaskOne {
+    public static void main(String[] args) {
+        // Set up ChromeDriver using WebDriverManager
+        WebDriverManager.chromedriver().setup();
 
-	public static void main(String[] args)
-	{
-		
-		        // Set the path to your WebDriver executable (e.g., ChromeDriver)
-                  WebDriverManager.chromedriver().setup();
+        // Initialize WebDriver
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		        // Initialize the WebDriver (Chrome in this case)
-		        WebDriver driver = new ChromeDriver();
+        // Open the URL
+        driver.get("https://the-internet.herokuapp.com/iframe");
 
-		            // Navigate to the URL
-		            driver.get("https://the-internet.herokuapp.com/iframe");
+        // Check for the read-only mode notice on the page before switching to the iframe
+        WebElement readOnlyNotice = driver.findElement(By.tagName("body"));
+        if (readOnlyNotice != null && readOnlyNotice.getText().contains("TinyMCE is in read-only mode")) {
+            System.out.println("TinyMCE is in read-only mode: Cannot write text.");
+        } else {
+            // Switch to the iframe using its CSS selector
+            WebElement iframe = driver.findElement(By.cssSelector("#mce_0_ifr"));
+            driver.switchTo().frame(iframe);
 
-		            // Switch to the iframe using its CSS selector or XPath
-		            WebElement iframe = driver.findElement(By.cssSelector("#mce_0_ifr"));
-		            driver.switchTo().frame(iframe);
+            // Locate the "p" tag inside the iframe and write the text "Hello People"
+            WebElement pTag = driver.findElement(By.cssSelector("#tinymce p"));
+            pTag.clear();
+            pTag.sendKeys("Hello People");
+        }
 
-		            // Set the content of the TinyMCE editor using JavaScript
-		            JavascriptExecutor js = (JavascriptExecutor) driver;
-		            js.executeScript("tinymce.activeEditor.setContent('<p>Hello People</p>');");
-		        
-		        }
-		    }
+        // Close the browser instance
+        driver.quit();
+    }
+}
