@@ -123,6 +123,12 @@ public class TwentyFourTaskOne {
 		       String pageText = landedPage.getText(); 
 		       System.out.println("Landed page is : " + pageText);
 		       
+		       
+		 
+		   
+		    }
+}
+		       
 
 
 		      
@@ -133,9 +139,6 @@ public class TwentyFourTaskOne {
 		       
 
 
-		    	   
-		       }
-		    }
 
 
 
