@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class TwentyFourTaskOne {
+public class TwentyFourthTaskOne {
 		    public static void main(String[] args) {
 		        // Set up the ChromeDriver using WebDriverManager
 		        WebDriverManager.chromedriver().setup();
