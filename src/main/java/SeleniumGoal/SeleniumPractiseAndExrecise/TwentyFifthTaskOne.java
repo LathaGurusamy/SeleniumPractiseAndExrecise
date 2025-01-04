@@ -42,9 +42,9 @@ public class TwentyFifthTaskOne {
 
 		            
 		            // Select the date "1" from the datepicker
-		            WebElement dateToSelect = driver.findElement(By.xpath("(//a[contains(text(),'4')])[1]"));
+		            WebElement dateToSelect = driver.findElement(By.xpath("(//a[contains(text(),'22')])[1]"));
 		            dateToSelect.click();
-		            System.out.println("Day '4' selected.");
+		            System.out.println("Day '22' selected.");
 
 
 		            //datepicker
