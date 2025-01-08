@@ -1,0 +1,58 @@
+package SeleniumGoal.SeleniumPractiseAndExrecise;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TwentyFifthTaskTwo {
+
+	public static void main(String[] args)
+	{
+		  // Set up the ChromeDriver using WebDriverManager
+        WebDriverManager.chromedriver().setup();
+
+        // Initialize WebDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Open GUVI registration page
+        driver.get("https://www.guvi.in/sign-in/");
+        
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        // Maximize the window
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+
+        // Entering Full Name
+        WebElement emailId = driver.findElement(By. id("email"));;
+        emailId.sendKeys("lathadummyid@gmail.com");
+        System.out.println("email Id is : " + "lathadummyid@gmail.com");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+
+        //Entering Password
+        WebElement Password = driver.findElement(By.xpath("//input[@type='password']"));;
+        Password.sendKeys("Dummyid@123");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+        System.out.println("Password is : " +"Dummyid@123");
+        
+        
+        
+     // Click on Login Button 
+        WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='login-btn']"))); 
+        login.click(); 
+        System.out.println("Login button clicked.");
+		  
+  
+        
+        
+	}
+
+}

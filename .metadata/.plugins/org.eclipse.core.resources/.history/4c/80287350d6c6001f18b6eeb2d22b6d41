@@ -1,0 +1,71 @@
+package SeleniumGoal.SeleniumPractiseAndExrecise;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import java.time.Duration;
+import java.util.Scanner;
+
+public class TwentyTastOne {
+	public static void main(String[] args) {
+		// Set up the ChromeDriver using WebDriverManager
+		WebDriverManager.chromedriver().setup();
+
+		// Initialize WebDriver
+		WebDriver driver = new ChromeDriver();
+
+		// Open Snapdeal website
+		driver.get("https://www.snapdeal.com");
+
+		// Maximize the window
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+
+		// Move cursor to the Sign In button and hold it
+		WebElement signInBtn = driver.findElement(By.xpath("//span[@class='accountUserName col-xs-12 reset-padding'])"));
+		Actions action = new Actions(driver);
+		action.moveToElement(signInBtn).perform();
+
+		// Click on the Sign In button
+		WebElement loginBtn = driver.findElement(By.xpath("//span[text()='Sign In']"));
+		loginBtn.click();
+
+		// Switch to the login iframe
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='iframeLogin']")));
+
+		// Enter a valid Email Id
+		WebElement emailField = driver.findElement(By.id("userName"));
+		emailField.sendKeys("your-email@example.com");
+
+		// Click on the Continue button
+		WebElement continueBtn = driver.findElement(By.id("checkUser"));
+		continueBtn.click();
+
+		// Wait for manual entry of OTP
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the OTP received: ");
+		String otp = scanner.nextLine();
+
+		// Enter OTP into the OTP field
+		WebElement otpField = driver.findElement(By.id("otpField"));
+		otpField.sendKeys(otp);
+
+		// Submit OTP
+		WebElement otpSubmitBtn = driver.findElement(By.id("submitOtpUC"));
+		otpSubmitBtn.click();
+
+		// Verify login
+		WebElement accountName = driver.findElement(By.className("accountUserName"));
+		if (accountName.isDisplayed()) {
+			System.out.println("Login successful. User logged in as: " + accountName.getText());
+		} else {
+			System.out.println("Login failed.");
+		}
+
+		// Close the browser
+		driver.quit();
+	}
+}

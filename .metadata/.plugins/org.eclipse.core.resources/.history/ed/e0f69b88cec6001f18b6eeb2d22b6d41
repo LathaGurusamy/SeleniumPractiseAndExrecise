@@ -1,0 +1,97 @@
+package SeleniumGoal.SeleniumPractiseAndExrecise;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.time.Duration;
+
+		public class TwentyThirdTaskOne {
+		    public static void main(String[] args) {
+		        // Set up the ChromeDriver using WebDriverManager
+		        WebDriverManager.chromedriver().setup();
+
+		        // Initialize WebDriver
+		        WebDriver driver = new ChromeDriver();
+
+		        // Open Facebook website
+		        driver.get("https://www.facebook.com/");
+
+		        // Maximize the window
+		        driver.manage().window().maximize();
+		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+
+		        // Verify homepage redirection
+		        if (driver.getTitle().contains("Facebook")) {
+		            System.out.println("Navigated to Facebook homepage successfully.");
+		        } else {
+		            System.out.println("Navigation to Facebook homepage failed.");
+		            driver.quit();
+		            return;
+		        }
+
+		        // Click on "Create new account" button
+		        WebElement createAccountButton = driver.findElement(By.xpath("//a[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy']"));
+		        createAccountButton.click();
+
+		        // Wait for the registration form to be visible
+		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		        // Enter first name and last name
+		        WebElement firstNameField = driver.findElement(By.name("firstname"));
+		        firstNameField.sendKeys("Test");
+		        WebElement lastNameField = driver.findElement(By.name("lastname"));
+		        lastNameField.sendKeys("User");
+
+		     
+		        
+		        
+		     // Select date of birth
+		        WebElement dayField = driver.findElement(By.name("birthday_day"));
+		        dayField.sendKeys("11");
+				
+			// Select date of month
+
+		        WebElement monthField = driver.findElement(By.name("birthday_month"));
+		        monthField.sendKeys("May");
+		    // Select date of year
+
+		        WebElement yearField = driver.findElement(By.name("birthday_year"));
+		        yearField.sendKeys("1985");
+
+
+		     
+                 // Select gender
+		        WebElement genderRadioButton = driver.findElement(By.xpath("//label[contains(text(),'Female')]"));
+		        genderRadioButton.click();
+
+		       
+		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		         // Enter email address
+		        WebElement enterEmailField = driver.findElement(By.xpath("//input[@aria-label='Mobile number or email address']"));
+		        enterEmailField.sendKeys("testuser@test.com");
+		        
+		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+
+		        // Enter password
+		        WebElement passwordField = driver.findElement(By.name("reg_passwd__"));
+		        passwordField.sendKeys("StrongPassword123!");
+
+		        // Verify successful registration
+		        // This part of the verification is simplified and may need adjustments based on actual page content after registration
+		        if (driver.getTitle().contains("Facebook")) {
+		            System.out.println("User registered successfully and redirected to the Facebook homepage.");
+		        } else {
+		            System.out.println("User registration failed.");
+		        }
+		        
+		     // Click on the "Sign Up" button
+		        WebElement signUpButton = driver.findElement(By.name("websubmit"));
+		        signUpButton.click();
+
+		        // Close the browser
+		        driver.quit();
+		    }
+		}

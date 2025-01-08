@@ -1,0 +1,17 @@
+<suite name="Test Suite" parallel="false">
+    <test name="Home Page Tests">
+        <classes>
+            <class name="com.demoblaze.tests.HomePageTest" />
+        </classes>
+    </test>
+    <test name="Sign Up Page Tests">
+        <classes>
+            <class name="com.demoblaze.tests.SignUpPageTest" />
+        </classes>
+    </test>
+    <test name="Login Page Tests">
+        <classes>
+            <class name="com.demoblaze.tests.LoginPageTest" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,93 @@
+package SeleniumGoal.SeleniumPractiseAndExrecise;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.Duration;
+
+public class TwentySeventhTaskOne {
+    public static void main(String[] args) throws IOException {
+        // Set up ChromeDriver using WebDriverManager
+        WebDriverManager.chromedriver().setup();
+
+        // Initialize WebDriver
+        WebDriver driver = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+        // Open the form page
+        driver.get("https://phptravels.com/demo/");
+
+        System.out.println("Page loaded.");
+
+        // Entering Firstname details
+        WebElement firstName = wait.until(ExpectedConditions.elementToBeClickable(By.name("first_name")));
+        firstName.sendKeys("John");
+        System.out.println("First name entered.");
+
+        // Entering LastName details
+        WebElement lastName = driver.findElement(By.name("last_name"));
+        lastName.sendKeys("Doe");
+        System.out.println("Last name entered.");
+
+        // Selecting country number details
+        WebElement countryNumber = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//select/option)[91]")));
+        countryNumber.click();
+        System.out.println("Country number selected.");
+
+        // Entering WhatsApp Number
+        WebElement whatsappNumber = driver.findElement(By.name("whatsapp"));
+        whatsappNumber.sendKeys("9480143224");
+        System.out.println("WhatsApp number entered.");
+
+        // Entering Business Name
+        WebElement businessName = driver.findElement(By.name("business_name"));
+        businessName.sendKeys("John's Business");
+        System.out.println("Business name entered.");
+
+        // Entering Email
+        WebElement email = driver.findElement(By.name("email"));
+        email.sendKeys("john.doe@example.com");
+        System.out.println("Email entered.");
+
+        // Add the logic for sum verification
+        WebElement number1 = driver.findElement(By.id("numb1"));
+        WebElement number2 = driver.findElement(By.id("numb2"));
+        int sum = Integer.parseInt(number1.getText()) + Integer.parseInt(number2.getText());
+
+        WebElement sumField = driver.findElement(By.id("number"));
+        sumField.sendKeys(String.valueOf(sum));
+        System.out.println("Sum verification completed.");
+
+        // Submit the form
+        WebElement submitButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='col-lg-6 order-3 order-lg-1 mt-3 mt-md-0']//button[@id='demo']")));
+        submitButton.click();
+        System.out.println("Submit button clicked.");
+
+        // Verify that the form is submitted successfully by checking the message displayed
+        WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("alert-success")));
+        if (successMessage.isDisplayed()) {
+            System.out.println("Form submitted successfully!");
+        } else {
+            System.out.println("Form submission failed.");
+        }
+
+        // Take a screenshot of the page after form submission
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        Files.copy(screenshot.toPath(), Paths.get("form_submission_screenshot.png"));
+        System.out.println("Screenshot taken: form_submission_screenshot.png");
+
+        // Close the browser instance
+        driver.quit();
+    }
+}

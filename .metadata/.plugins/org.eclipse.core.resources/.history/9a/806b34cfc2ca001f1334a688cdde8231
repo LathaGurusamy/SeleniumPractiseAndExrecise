@@ -1,0 +1,25 @@
+package SeleniumGoal.SeleniumPractiseAndExrecise;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+public class TwentySixthTaskTwo {
+    public static void main(String[] args) {
+        // Set the path to your WebDriver executable (e.g., ChromeDriver)
+        WebDriverManager.chromedriver().setup();
+
+        // Initialize the WebDriver (Chrome in this case)
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        // Navigate to the URL
+        driver.get("https://the-internet.herokuapp.com/windows");
+
+        // Click the "Click Here" button to open a new window
+        WebElement clickHereButton = driver.findElement(By.linkText("Click Here"));
+        clickHereButton.click

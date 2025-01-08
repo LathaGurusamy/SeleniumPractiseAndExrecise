@@ -1,0 +1,67 @@
+package SeleniumGoal.SeleniumPractiseAndExrecise;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.time.Duration;
+
+public class TwentyFourTaskOne {
+		    public static void main(String[] args) {
+		        // Set up the ChromeDriver using WebDriverManager
+		        WebDriverManager.chromedriver().setup();
+
+		        // Initialize WebDriver
+		        WebDriver driver = new ChromeDriver();
+
+		        // Open GUVI registration page
+		        driver.get("https://www.guvi.in/register");
+
+		        // Maximize the window
+		        driver.manage().window().maximize();
+		        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Implicit wait
+
+		        // Locators using ID
+		        WebElement firstNameField = driver.findElement(By.id("first_name"));
+		        WebElement lastNameField = driver.findElement(By.id("last_name"));
+		        
+		        // Locators using ClassName
+		        WebElement emailField = driver.findElement(By.className("form-control"));
+		        
+		        // Locators using TagName
+		        WebElement passwordField = driver.findElement(By.tagName("input"));
+		        
+		        // Locators using Css Selector
+		        WebElement confirmPasswordField = driver.findElement(By.cssSelector("input[name='confirm_password']"));
+		        
+		        // Locators using Xpath
+		        WebElement countrySelect = driver.findElement(By.xpath("//select[@name='country']"));
+		        
+		        // Fill the registration form
+		        firstNameField.sendKeys("Test");
+		        lastNameField.sendKeys("User");
+		        emailField.sendKeys("testuser@test.com");
+		        passwordField.sendKeys("StrongPassword123!");
+		        confirmPasswordField.sendKeys("StrongPassword123!");
+		        countrySelect.sendKeys("India");
+		        
+		        // Locators for phone number and submitting the form
+		        WebElement phoneNumberField = driver.findElement(By.id("phone_number"));
+		        WebElement submitButton = driver.findElement(By.xpath("//button[@type='submit']"));
+
+		        phoneNumberField.sendKeys("1234567890");
+		        submitButton.click();
+
+		        // Verification message
+		        if (driver.getTitle().contains("GUVI")) {
+		            System.out.println("Registration successful.");
+		        } else {
+		            System.out.println("Registration failed.");
+		        }
+
+		        // Close the browser
+		        driver.quit();
+		    }
+		}
+
