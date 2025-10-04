@@ -1,4 +1,10 @@
 /target/
-../SeleniumPractiseAndExrecise/
+/test-output/
+/.metadata/
+/*.log
+*.class
+*.iml
+.DS_Store
+
 
 
