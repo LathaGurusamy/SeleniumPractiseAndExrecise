@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BestBuy Automation Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Full Functional Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.bestbuy.test.LoginTest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="loginToBestBuy"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.LoginTest -->
+      <class name="com.bestbuy.test.MenuNavigationTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="validateMenuNavigationTitles"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.MenuNavigationTest -->
+      <class name="com.bestbuy.test.BrandTest">
+        <methods>
+          <include name="selectBrandAndAddItem"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.BrandTest -->
+      <class name="com.bestbuy.test.SearchCartTest">
+        <methods>
+          <include name="setup"/>
+          <include name="searchAndAddItemToCart"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.SearchCartTest -->
+      <class name="com.bestbuy.test.LinkValidatorTest">
+        <methods>
+          <include name="validateAllLinks"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.LinkValidatorTest -->
+      <class name="com.bestbuy.test.DepartmentTest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="selectDepartmentAndAddItem"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.DepartmentTest -->
+      <class name="com.bestbuy.test.BottomLinksTest">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="validateFooterLinks"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.BottomLinksTest -->
+      <class name="com.bestbuy.test.CheckoutTest">
+        <methods>
+          <include name="proceedToCheckoutWithDummyInfo"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.CheckoutTest -->
+      <class name="com.bestbuy.test.ConfirmationTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="verifyOrderConfirmation"/>
+        </methods>
+      </class> <!-- com.bestbuy.test.ConfirmationTest -->
+    </classes>
+  </test> <!-- Full Functional Tests(failed) -->
+</suite> <!-- Failed suite [BestBuy Automation Suite] -->

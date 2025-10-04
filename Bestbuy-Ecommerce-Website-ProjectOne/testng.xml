@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BestBuyRegressionSuite">
+  <test name="Login and Navigation Tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <!-- <class name="com.bestbuy.tests.LoginTest"/> -->
+       <!-- <class name="com.bestbuy.tests.LinkNavigatorTest"/> -->
+       <!--	<class name="com.bestbuy.tests.MenuNamePrinterTest"/> -->
+       <!-- <class name="com.bestbuy.tests.MenuNavigationTest"/> -->
+       <!-- <class name="com.bestbuy.tests.BottomMenuTest"/> -->
+       <!--	<class name="com.bestbuy.tests.SearchAndAddToCartTest"/> -->			
+       <!--	<class name="com.bestbuy.tests.selectAndAddFromDepartmentTest"/> -->
+       <!-- <class name="com.bestbuy.tests.SelectAndAddFromBrandTest"/>  -->
+            <class name="com.bestbuy.tests.BestBuyOpenToCloseBrowserTest"/>
+        
+    </classes>
+  </test>
+</suite>
