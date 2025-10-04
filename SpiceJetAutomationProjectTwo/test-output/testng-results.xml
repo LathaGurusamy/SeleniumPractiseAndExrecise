@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-28T01:45:16 IST" name="Default suite" finished-at="2025-09-28T01:46:43 IST" duration-ms="87826">
+    <groups>
+    </groups>
+    <test started-at="2025-09-28T01:45:16 IST" name="Default test" finished-at="2025-09-28T01:46:43 IST" duration-ms="87826">
+      <class name="tests.SpiceJetTest">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:15 IST" name="setUpSuite" finished-at="2025-09-28T01:45:16 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpSuite -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:16 IST" name="setUp" finished-at="2025-09-28T01:45:25 IST" duration-ms="9579" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["chrome"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchOneWayFlight()[pri:1, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:25 IST" name="searchOneWayFlight" finished-at="2025-09-28T01:45:29 IST" duration-ms="3756" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[One-way search failed due to missing element.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: One-way search failed due to missing element.
+at org.testng.Assert.fail(Assert.java:110)
+at tests.SpiceJetTest.searchOneWayFlight(SpiceJetTest.java:92)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchOneWayFlight -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:29 IST" name="tearDown" finished-at="2025-09-28T01:45:29 IST" duration-ms="447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:29 IST" name="setUp" finished-at="2025-09-28T01:45:39 IST" duration-ms="9793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["chrome"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchRoundTripFlight()[pri:2, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:39 IST" name="searchRoundTripFlight" finished-at="2025-09-28T01:45:40 IST" duration-ms="637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchRoundTripFlight -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:40 IST" name="tearDown" finished-at="2025-09-28T01:45:40 IST" duration-ms="487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:40 IST" name="setUp" finished-at="2025-09-28T01:45:48 IST" duration-ms="7675" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["chrome"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="selectFlightAndProceed()[pri:3, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:48 IST" name="selectFlightAndProceed" finished-at="2025-09-28T01:45:52 IST" duration-ms="3601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFlightAndProceed -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:52 IST" name="tearDown" finished-at="2025-09-28T01:45:54 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:45:54 IST" name="setUp" finished-at="2025-09-28T01:46:01 IST" duration-ms="7886" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["chrome"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="fillBookingForm()[pri:4, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:01 IST" name="fillBookingForm" finished-at="2025-09-28T01:46:05 IST" duration-ms="3606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillBookingForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:05 IST" name="tearDown" finished-at="2025-09-28T01:46:06 IST" duration-ms="488" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:06 IST" name="setUp" finished-at="2025-09-28T01:46:13 IST" duration-ms="7423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["chrome"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyBookingConfirmation()[pri:5, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:13 IST" name="verifyBookingConfirmation" finished-at="2025-09-28T01:46:27 IST" duration-ms="14196" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Booking confirmation failed: Expected condition failed: waiting for presence of element located by: By.id: confirmationMessage (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Booking confirmation failed: Expected condition failed: waiting for presence of element located by: By.id: confirmationMessage (tried for 10 second(s) with 500 milliseconds interval)
+at org.testng.Assert.fail(Assert.java:110)
+at tests.SpiceJetTest.verifyBookingConfirmation(SpiceJetTest.java:270)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBookingConfirmation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:27 IST" name="tearDown" finished-at="2025-09-28T01:46:29 IST" duration-ms="2096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:29 IST" name="setUp" finished-at="2025-09-28T01:46:37 IST" duration-ms="8136" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["chrome"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateBookingPageFields()[pri:6, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:37 IST" name="validateBookingPageFields" finished-at="2025-09-28T01:46:43 IST" duration-ms="5487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBookingPageFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:43 IST" name="tearDown" finished-at="2025-09-28T01:46:43 IST" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:tests.SpiceJetTest@62ddbd7e]" started-at="2025-09-28T01:46:43 IST" name="tearDownSuite" finished-at="2025-09-28T01:46:44 IST" duration-ms="889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- tests.SpiceJetTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -19,7 +19,10 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Automation\EcommerceWebsiteProject1\bestbuy-ecommerce-test"/>
 			<item value="D:\Automation\SeleniumPractiseAndExrecise"/>
+			<item value="D:\Automation\SpiceJetAutomationProject2"/>
+			<item value="D:\Automation\demoblazeproject"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -43,17 +46,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="demoblazeproject.demoblazeproject"/>
-			<item value="demoblaze.demoblaze"/>
-			<item value="demoblaze"/>
 		</list>
 		<list key="groupId">
-			<item value="demoblazeproject"/>
-			<item value="demoblaze"/>
 		</list>
 		<list key="artifactId">
-			<item value="demoblazeproject"/>
-			<item value="demoblaze"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
